@@ -1,0 +1,317 @@
+/* Estilos generales */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #121212;
+    color: white;
+
+}
+.galeria-musical {
+  text-align: center;
+  padding: 20px;
+  background-color: #121212;
+  color: #fff;
+}
+
+.contenedor-galeria {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.contenedor-galeria img {
+  width: 160px;
+  height: 110px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(255, 255, 255, 0.1);
+  transition: transform 0.2s ease-in-out;
+}
+
+.contenedor-galeria img:hover {
+  transform: scale(1.05);
+}
+
+.reproductor {
+  background: linear-gradient(to right, #4a148c, #7b1fa2);
+  border-radius: 15px;
+  padding: 15px;
+  max-width: 500px;
+  margin: auto;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.reproductor-contenido {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.portada {
+  width: 80px;
+  height: 80px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.info {
+  flex: 1;
+}
+
+.info .titulo {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #fff;
+}
+
+.audio {
+  width: 100%;
+  border-radius: 10px;
+  background-color: #fff;
+}
+
+#playlist:target ~ .song,
+#reproduccion:target ~ .song {
+    display: block;
+}
+
+.menu-button {
+    display: inline-block;
+    background-color: #222;
+    color: white;
+    padding: 10px 20px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.menu-button:hover {
+    background-color: #444;
+}
+
+.menu-button:focus {
+    outline: none;
+    box-shadow: 0 0 8px #011708, 0 0 16px #011708;
+}
+
+.menu-button:active {
+    transform: scale(0.98);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.bienvenida {
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 50px 20px;
+    margin: 30px auto;
+    max-width: 800px;
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+}
+
+.bienvenida h1 {
+    font-size: 3em;
+    margin-bottom: 10px;
+    color: #ffd700;
+}
+
+.bienvenida p {
+    font-size: 1.2em;
+    color: #f0f0f0;
+}
+
+#inicio {
+    background-color: rgba(1, 23, 8, 0.7);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(1, 23, 8, 0.95);
+    width: 200px;
+    text-align: center;
+    color: #fff;
+}
+
+#inicio h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+#inicio label {
+    font-size: 16px;
+    text-align: left;
+    display: block;
+    margin-bottom: 5px;
+}
+
+#inicio input[type="text"],
+#inicio input[type="password"],
+#inicio input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+#inicio input[type="submit"],
+#inicio button {
+    width: 100%;
+    padding: 10px;
+    background-color: #011708;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#inicio input[type="submit"]:hover,
+#inicio button:hover {
+    background-color: #011708;
+}
+
+.login input,
+.login button {
+    width: 90%;
+    padding: 10px;
+    margin: 5px 0;
+    border: none;
+    border-radius: 5px;
+}
+
+.login button {
+    background-color: #011708;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.inicio-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 20px;
+}
+
+.seccion {
+    background-color: rgba(0, 0, 0, 0.5); 
+    color: white;
+    width: 30%;
+    min-width: 250px;
+    margin: 10px;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #000;
+    display: none; 
+}
+
+h2 {
+    color: yellow;
+}
+
+.playlist {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to right, #1e3c72, #2a5298);
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+#showPlaylistBtn {
+    margin: 30px;
+    padding: 15px 30px;
+    font-size: 18px;
+    background-color: #ffd700;
+    color: #1e3c72;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+#showPlaylistBtn:hover {
+    background-color: #ffcc00;
+}
+
+#playlist {
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    display: none; 
+}
+
+#playlist h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #fff;
+    padding-bottom: 10px;
+}
+
+.section {
+    margin-bottom: 30px;
+}
+
+.section h3 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+    color: #ffd700;
+}
+
+.music-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 15px;
+}
+
+.music-card {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background: linear-gradient(to right, #283593, #3949ab);
+    border-radius: 15px;
+    padding: 15px;
+    max-width: 500px;
+    margin: auto;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.music-card:hover {
+    transform: scale(1.02);
+    background: linear-gradient(to right, #3949ab, #5c6bc0);
+}
+
+.music-card .cover {
+    width: 80px;
+    height: 80px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.music-card .info {
+    flex: 1;
+}
+
+.music-card p {
+    margin: 0 0 5px;
+    font-weight: bold;
+    font-size: 16px;
+    color: #fff;
+}
+
+.music-card audio {
+    width: 100%;
+    border-radius: 10px;
+}
